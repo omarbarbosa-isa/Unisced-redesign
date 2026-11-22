@@ -1,0 +1,135 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explore os cursos da Universidade Aberta ISCED.">
+    <title>Cursos | UnISCED</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+    <script src="js/cursos.js" defer></script>
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="container navbar">
+
+            <a href="index.html" class="brand">
+                <img src="assets/images/Logo unisced.png" alt="Logótipo da UnISCED">
+            </a>
+
+            <nav class="navigation">
+                <a href="index.html">Início</a>
+                <a href="cursos.html" class="active">Cursos</a>
+                <a href="contactos.html">Contactos</a>
+            </nav>
+
+            <a href="https://unisced.edu.mz/" class="btn btn-gold">
+                Website oficial
+            </a>
+
+        </div>
+    </header>
+
+    <main>
+
+        <section class="page-banner">
+            <div class="container">
+                <span class="eyebrow">FORMAÇÃO ACADÉMICA</span>
+                <h1>Explore os nossos cursos</h1>
+                <p>
+                    Descubra oportunidades de formação e encontre
+                    o curso adequado aos seus objectivos.
+                </p>
+            </div>
+        </section>
+
+        <section class="catalog section">
+            <div class="container">
+
+                <div class="section-heading">
+                    <span class="eyebrow">CATÁLOGO ACADÉMICO</span>
+                    <h2>Encontre o seu próximo curso.</h2>
+                    <p>Utilize a pesquisa e os filtros para encontrar cursos.</p>
+                </div>
+
+                <!-- Pesquisa e filtros -->
+                <div class="catalog-tools">
+
+                    <div class="search-box">
+                        <input
+                            type="search"
+                            id="search-course"
+                            placeholder="Pesquisar curso pelo nome..."
+                            aria-label="Pesquisar cursos">
+                    </div>
+
+                    <select id="filter-faculty" aria-label="Filtrar por faculdade">
+                        <option value="">Todas as faculdades</option>
+                        <option value="Ciências de Saúde">Ciências de Saúde</option>
+                        <option value="Ciências de Educação">Ciências de Educação</option>
+                        <option value="Economia e Gestão">Economia e Gestão</option>
+                        <option value="Ciências Sociais e Humanas">Ciências Sociais e Humanas</option>
+                        <option value="Direito">Direito</option>
+                        <option value="Engenharias e Agricultura">Engenharias e Agricultura</option>
+                    </select>
+
+                    <select id="sort-courses" aria-label="Ordenar cursos">
+                        <option value="az">Ordem alfabética (A–Z)</option>
+                        <option value="za">Ordem alfabética (Z–A)</option>
+                    </select>
+
+                </div>
+
+                <div class="catalog-summary">
+                    <p id="course-count">A carregar cursos...</p>
+                </div>
+
+                <!-- Lista dinâmica de cursos -->
+                <div id="courses-list" class="courses-grid"></div>
+
+                <p id="empty-message" class="empty-message" hidden>
+                    Não foram encontrados cursos com estes critérios.
+                </p>
+
+                <!-- Lista de interesse -->
+                <section class="interest-section">
+
+                    <div class="section-heading">
+                        <span class="eyebrow">OS SEUS FAVORITOS</span>
+                        <h2>Minha lista de interesse</h2>
+                        <p>Guarde os cursos que pretende consultar posteriormente.</p>
+                    </div>
+
+                    <div id="interest-list" class="interest-list"></div>
+
+                    <p id="interest-empty" class="empty-message">
+                        Ainda não adicionou nenhum curso à sua lista.
+                    </p>
+
+                </section>
+
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <div>
+                <h3>UnISCED</h3>
+                <p>Universidade Aberta ISCED</p>
+            </div>
+
+            <p>
+                © <span id="current-year"></span>
+                UnISCED. Projecto académico de redesenho (Omar Barbosa).
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
